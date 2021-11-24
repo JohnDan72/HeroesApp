@@ -1,13 +1,66 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html,body,#root, .rs-container, .rs-sidebar, .rs-sidenav{
+  height: 100%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.allHeightWidth {
+  height: 100%;
+  width: 100%;
+
 }
+.v-a-middle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hide{
+  display: none;
+}
+
+
+/* override rsuite css */
+
+.rs-toggle .rs-toggle-inner {
+  display: flex;
+  align-items: center;
+}
+
+.rs-navbar-item {
+  display: flex;
+  align-items: center;
+}
+
+.rs-sidenav-default .rs-sidenav-item {
+  display: flex;
+  align-items: center;
+}
+
+.rs-sidenav-item svg , .rs-sidenav-nav .rs-dropdown .rs-btn > .rs-dropdown-toggle-icon {
+  font-size: 16px;
+  margin-right: 20px;
+  position: absolute;
+  left: 20px;
+  top: 15px;
+  line-height: 1.25;
+  height: 16px;
+}
+
+
+@media (max-width: 768px){    
+  .hideNav {
+    display: none !important;
+  }
+  .hideSidebar {
+    display: block !important;
+  }
+}
+
+@media (min-width: 769px){
+  .hideNav {
+    display: block !important;
+  }
+  .hideSidebar {
+    display: none !important;
+  }
+}
+
