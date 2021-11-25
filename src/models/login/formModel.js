@@ -2,16 +2,21 @@ import { Schema } from "rsuite";
 const { StringType } = Schema.Types;
 
 
+const minEmail = 10;
+const maxEmail = 50;
+const minPassword = 6;
+const maxPassword = 30;
+
 const model = Schema.Model({
     email: StringType()
-        .isEmail('Ingresa un email válido')
         .isRequired('Campo requerido')
-        .minLength(4, 'Debe tener mínimo 4 caracteres')
-        .maxLength(40, 'Debe tener máximo 40 caracteres'),
+        .minLength(minEmail, `Debe tener mínimo ${minEmail} caracteres`)
+        .maxLength(maxEmail, `Debe tener máximo ${maxEmail} caracteres`)
+        .isEmail('Ingresa un email válido'),
     password: StringType()
         .isRequired('Campo requerido')
-        .minLength(6, 'Debe tener mínimo 6 caracteres')
-        .maxLength(20, 'Debe tener máximo 20 caracteres'),
+        .minLength(minPassword, `Debe tener mínimo ${minPassword} caracteres`)
+        .maxLength(maxPassword, `Debe tener máximo ${maxPassword} caracteres`)
 });
 
 export default model;

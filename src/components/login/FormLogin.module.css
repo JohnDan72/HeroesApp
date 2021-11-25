@@ -8,3 +8,30 @@
 .textCenter{
     text-align: center;
 }
+
+.centerButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.forgotDiv{
+
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.googleDiv{
+    display: flex;
+    justify-content: center;
+}
+
+.newAccount{
+
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
