@@ -1,0 +1,10 @@
+.imgStyle{
+    max-height: 150px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.textCenter{
+    text-align: center;
+}

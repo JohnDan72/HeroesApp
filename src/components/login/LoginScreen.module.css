@@ -1,0 +1,67 @@
+/*html, body, .root {*/
+
+.allHeighWidth {
+    height: 100%;
+    width: 100%;
+}
+
+.centerContainer {
+    /*IMPORTANTE*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel1 {
+    background: url("../../media/img/carousel1.jpg");
+    background-position: center;
+    background-attachment: contain;
+    background-size: cover;
+    background-color: rgb(51 51 51 / 55%);
+    background-blend-mode: multiply;
+}
+
+.carousel2 {
+    background: url("../../media/img/carousel2.jpg");
+    background-position: center;
+    background-attachment: contain;
+    background-size: cover;
+    background-color: rgb(51 51 51 / 55%);
+    background-blend-mode: multiply;
+}
+
+.carousel3 {
+    background: url("../../media/img/carousel3.jpg");
+    background-position: center;
+    background-attachment: contain;
+    background-size: cover;
+    background-color: rgb(51 51 51 / 55%);
+    background-blend-mode: multiply;
+}
+
+.carousel4 {
+    background: url("../../media/img/carousel4.jpg");
+    background-position: center;
+    background-attachment: contain;
+    background-size: cover;
+    background-color: rgb(51 51 51 / 55%);
+    background-blend-mode: multiply;
+}
+
+.carousel5 {
+    background: url("../../media/img/carousel5.jpg");
+    background-position: center;
+    background-attachment: contain;
+    background-size: cover;
+    background-color: rgb(51 51 51 / 55%);
+    background-blend-mode: multiply;
+}
+
+.carousel6 {
+    background: url("../../media/img/carousel6.jpg");
+    background-position: center;
+    background-attachment: contain;
+    background-size: cover;
+    background-color: rgb(51 51 51 / 55%);
+    background-blend-mode: multiply;
+}

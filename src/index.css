@@ -5,8 +5,15 @@ html,body,#root, .rs-container, .rs-sidebar, .rs-sidenav{
 .allHeightWidth {
   height: 100%;
   width: 100%;
-
 }
+
+.h-100{
+  height: 100% !important;
+}
+.w-100{
+  width: 100% !important;
+}
+
 .v-a-middle{
   display: flex;
   justify-content: center;
@@ -29,6 +36,11 @@ html,body,#root, .rs-container, .rs-sidebar, .rs-sidenav{
   display: flex;
   align-items: center;
 }
+
+.rs-navbar-item svg , .rs-dropdown-item svg{
+  margin-right: 3px;
+}
+
 
 .rs-sidenav-default .rs-sidenav-item {
   display: flex;
