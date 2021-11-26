@@ -1,5 +1,7 @@
 import React, { useContext, useState } from 'react';
 // import PropTypes from 'prop-types';
+import logoPath from '../../media/img/logoCircle.png';
+
 import { IconButton, Nav, Sidebar, Sidenav } from 'rsuite';
 import { GeneralContext } from '../../GeneralContext';
 import { CustomNavLink } from './CustomNavLink';
@@ -8,9 +10,8 @@ import { CustomNavLink } from './CustomNavLink';
 import styles from './SideNavBar.module.css';
 
 // icons
-import { Icon } from '@rsuite/icons';
-import { BsFillHouseFill, BsFillPersonFill , BsSearch } from 'react-icons/bs';
-import { GiBatMask, GiMaskedSpider, GiSpiderMask } from 'react-icons/gi';
+import { BsFillHouseFill, BsFillPersonFill, BsSearch } from 'react-icons/bs';
+import { GiBatMask, GiMaskedSpider } from 'react-icons/gi';
 import { MdColorLens, MdDarkMode, MdLightMode } from 'react-icons/md';
 import { FiLogOut } from 'react-icons/fi';
 import { ArrowLeftLine, ArrowRightLine } from '@rsuite/icons';
@@ -25,7 +26,7 @@ const SideNavBar = () => {
             style={{ display: 'flex', flexDirection: 'column' }}
             width={expanded ? 220 : 56}
             collapsible >
-            
+
 
             <Sidenav
                 expanded={expanded}
@@ -33,8 +34,8 @@ const SideNavBar = () => {
             >
                 <Sidenav.Body>
                     <div className={`v-a-middle ${styles.sideHeader}`}>
-                        <Icon as={GiSpiderMask} style={{ fontSize: '36px' }} />
-                        <h5 className={expanded ? '' : 'hide'}>Heroes App</h5>
+                        <img src={logoPath} alt="logo" height="50" />
+                        <h5 className={ expanded ? 'ml-2' : 'hide'}>Heroes App</h5>
                     </div>
 
                     <Nav activeKey={active}
@@ -45,7 +46,7 @@ const SideNavBar = () => {
                         </Nav.Item>
                         <Nav.Item as={CustomNavLink} href="/dc" eventKey="dc" icon={<GiBatMask />}>DC</Nav.Item>
                         <Nav.Item as={CustomNavLink} href="/marvel" eventKey="marvel" icon={<GiMaskedSpider />}>Marvel</Nav.Item>
-                        
+
                         <Nav.Item as={CustomNavLink} href="/search" eventKey="search" icon={<BsSearch />}>Search</Nav.Item>
 
                         <Nav.Dropdown title="Theme" icon={<MdColorLens />}>

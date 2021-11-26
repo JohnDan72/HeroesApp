@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import styles from '../Common.module.css';
 // import PropTypes from 'prop-types';
 import { Nav, Navbar } from 'rsuite';
 import { CustomNavLink } from './CustomNavLink';
@@ -10,7 +11,7 @@ import { BsFillPersonFill, BsSearch } from "react-icons/bs";
 import { GiBatMask, GiMaskedSpider } from 'react-icons/gi';
 import { MdColorLens, MdDarkMode, MdLightMode } from 'react-icons/md';
 import { FiLogOut } from 'react-icons/fi';
-
+import logoPath from '../../media/img/logoCircle.png';
 
 
 const propTypes = {};
@@ -30,8 +31,8 @@ const MiNavBar = () => {
 
         <Navbar appearance="inverse">
             <div className="container">
-                <Navbar.Brand as={CustomNavLink} href="/">
-                    Heroes App
+                <Navbar.Brand as={CustomNavLink} href="/" className={styles.logoDiv}>
+                    <img src={logoPath} alt="logo" height="50"/>
                 </Navbar.Brand>
                 <Nav activeKey={active} onSelect={setActive}>
                     <Nav.Item as={CustomNavLink} href="/dc" eventKey="dc" icon={<GiBatMask />}>DC</Nav.Item>

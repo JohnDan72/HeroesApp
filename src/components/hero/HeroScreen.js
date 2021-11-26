@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { useMemo } from 'react';
 import styles from "./HeroScreen.module.css";
 import { useParams, Navigate , useNavigate } from 'react-router-dom';
 import { Button, Col, Divider, FlexboxGrid, Panel } from 'rsuite';
@@ -10,7 +10,7 @@ const propTypes = {};
 const defaultProps = {};
 
 const HeroScreen = () => {
-    const [counter, setCounter] = useState(0);
+    // const [counter, setCounter] = useState(0);
 
     const navigate = useNavigate();
     const params = useParams();
@@ -37,9 +37,9 @@ const HeroScreen = () => {
     return (
         <div className="container my-5">
             
-            {/* Prueba useMemo */}
+            {/* Prueba useMemo
             {counter} 
-            <Button className="my-3" appearance="ghost" onClick={()=> setCounter(counter + 1)}>sumar</Button>
+            <Button className="my-3" appearance="ghost" onClick={()=> setCounter(counter + 1)}>sumar</Button> */}
 
 
             <Panel style={{ width: "100%" }} bodyFill>
