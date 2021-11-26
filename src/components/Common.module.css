@@ -1,0 +1,31 @@
+.bgImg1{
+    height: 200px;
+    background: url("../media/img/homeImg.jpg");
+    background-position: center;
+    background-attachment: contain;
+    background-size: cover;
+    background-color: rgb(51 51 51 / 55%);
+    background-blend-mode: multiply;
+}
+.bgImg2{
+    height: 200px;
+    background: url("../media/img/marvel.jpg");
+    background-position: center;
+    background-attachment: contain;
+    background-size: cover;
+    background-color: rgb(51 51 51 / 55%);
+    background-blend-mode: multiply;
+}
+.bgImg3{
+    height: 200px;
+    background: url("../media/img/dc.jpg");
+    background-position: center;
+    background-attachment: contain;
+    background-size: cover;
+    background-color: rgb(51 51 51 / 55%);
+    background-blend-mode: multiply;
+}
+
+.breadcrumbText{
+    font-size: 28px;
+}

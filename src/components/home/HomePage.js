@@ -1,12 +1,22 @@
 import React from 'react';
-import { Divider } from 'rsuite';
-
+import { Breadcrumb, Divider } from 'rsuite';
+import HeroList from '../hero/HeroList';
+import styles from "../Common.module.css";
 
 const HomePage = () => {
-    return(
+    return (
         <>
-            <h3>Home</h3>
-            <Divider></Divider>
+            <div className={`${styles.bgImg1} v-a-middle`} >
+                <Breadcrumb className="container">
+                    <Breadcrumb.Item active className={`${styles.breadcrumbText}`}>
+                        Home
+                    </Breadcrumb.Item>
+                </Breadcrumb>
+            </div>
+            <div className="container mt-5">
+                <Divider></Divider>
+                <HeroList publisher="" />
+            </div>
         </>
     );
 }

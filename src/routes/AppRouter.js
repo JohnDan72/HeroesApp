@@ -7,7 +7,6 @@ import LoginScreen from '../components/login/LoginScreen';
 import NotFound from '../components/404/NotFound';
 
 import { GeneralContext } from '../GeneralContext';
-import { CustomProvider } from 'rsuite';
 
 const propTypes = {};
 const defaultProps = {};
@@ -24,15 +23,15 @@ const AppRouter = () => {
             active, setActive,
         }}
         >
-            <CustomProvider theme={theme}>
-                <Router>
-                    <Routes>
-                        <Route exact path="/login" element={<LoginScreen />} />
-                        <Route exact path="/*" element={<DashboardRouter />} />
-                        <Route path="*" element={<NotFound />} />
-                    </Routes>
-                </Router>
-            </CustomProvider>
+
+            <Router>
+                <Routes>
+                    <Route exact path="/login" element={<LoginScreen />} />
+                    <Route exact path="/*" element={<DashboardRouter />} />
+                    <Route path="*" element={<NotFound />} />
+                </Routes>
+            </Router>
+
         </GeneralContext.Provider >
     );
 }

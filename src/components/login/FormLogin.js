@@ -1,9 +1,10 @@
 import React from 'react';
 import { Button, ButtonToolbar, Col, Divider, FlexboxGrid, Form } from 'rsuite';
+import { useNavigate  } from 'react-router-dom'
+
 // icons
 import { BiSend } from 'react-icons/bi';
 import { FcGoogle } from 'react-icons/fc';
-import { MdAccountCircle } from 'react-icons/md';
 
 
 // import PropTypes from 'prop-types';
@@ -22,9 +23,16 @@ const defaultProps = {};
 
 
 const FormLogin = () => {
+
+    const navigate = useNavigate();
+
     const handleLogin = (status) => {
         console.log("Login!!!");
         console.log(status);
+        navigate('/' , {
+            replace: true
+        })
+        return;
     }
 
     return (
@@ -50,7 +58,7 @@ const FormLogin = () => {
                         model={model}
                     >
 
-                        <TextField name="email" label="Email" autoComplete="off" />
+                        <TextField name="email" label="Email"  />
                         <TextField name="password"
                             label="Password"
                             type="password"

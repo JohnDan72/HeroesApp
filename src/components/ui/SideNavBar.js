@@ -10,7 +10,7 @@ import styles from './SideNavBar.module.css';
 // icons
 import { Icon } from '@rsuite/icons';
 import { BsFillHouseFill, BsFillPersonFill , BsSearch } from 'react-icons/bs';
-import { GiBatMask, GiDominoMask, GiMaskedSpider, GiSpiderMask } from 'react-icons/gi';
+import { GiBatMask, GiMaskedSpider, GiSpiderMask } from 'react-icons/gi';
 import { MdColorLens, MdDarkMode, MdLightMode } from 'react-icons/md';
 import { FiLogOut } from 'react-icons/fi';
 import { ArrowLeftLine, ArrowRightLine } from '@rsuite/icons';
@@ -45,7 +45,6 @@ const SideNavBar = () => {
                         </Nav.Item>
                         <Nav.Item as={CustomNavLink} href="/dc" eventKey="dc" icon={<GiBatMask />}>DC</Nav.Item>
                         <Nav.Item as={CustomNavLink} href="/marvel" eventKey="marvel" icon={<GiMaskedSpider />}>Marvel</Nav.Item>
-                        <Nav.Item as={CustomNavLink} href="/hero" eventKey="hero" icon={<GiDominoMask />}>Hero</Nav.Item>
                         
                         <Nav.Item as={CustomNavLink} href="/search" eventKey="search" icon={<BsSearch />}>Search</Nav.Item>
 

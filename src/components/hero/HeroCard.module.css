@@ -1,0 +1,10 @@
+.imgCard{
+    width: 100%;
+    height: 200px;
+}
+
+.rsPanel{
+    height: 260px;
+    border-color: unset;
+    box-shadow: 1px 1px 8px var(--rs-gray-500);
+}

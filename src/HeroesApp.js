@@ -19,7 +19,7 @@ const HeroesApp = () => {
                 <Header className="hideNav">
                     <MiNavBar />
                 </Header>
-                <Content className="container mt-5">
+                <Content>
                     <Outlet />
                 </Content>
             </Container>
