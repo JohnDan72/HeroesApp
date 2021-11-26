@@ -42,7 +42,7 @@
         height: 550px;
         display: flex;
         align-items: center;
-        justify-content: end;
+        justify-content: flex-end;
         left: 6px;
     }
     .heroImg{

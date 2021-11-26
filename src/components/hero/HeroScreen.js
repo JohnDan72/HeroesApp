@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useMemo, useState } from 'react';
 import styles from "./HeroScreen.module.css";
-import { useParams, Navigate } from 'react-router-dom';
-import { Col, Divider, FlexboxGrid, Panel } from 'rsuite';
+import { useParams, Navigate , useNavigate } from 'react-router-dom';
+import { Button, Col, Divider, FlexboxGrid, Panel } from 'rsuite';
 import { getHeroesById } from "../../selectors/getHeroesById";
 // import PropTypes from 'prop-types';
 
@@ -10,26 +10,38 @@ const propTypes = {};
 const defaultProps = {};
 
 const HeroScreen = () => {
+    const [counter, setCounter] = useState(0);
+
+    const navigate = useNavigate();
     const params = useParams();
     const { id_hero } = params;
-    const heroInfo = getHeroesById(id_hero);
+
+    
+    const heroInfo = useMemo(() => getHeroesById(id_hero), [id_hero]);
+
+    if (!heroInfo) {
+        return <Navigate to="/" />;
+    }
     const { id,
         superhero,
         publisher,
         alter_ego,
         first_appearance,
         characters } = heroInfo;
-
-    if (!heroInfo) {
-        return <Navigate to="/" />;
-    }
-
     let logoPath = `/assets/`
     logoPath += (publisher.startsWith('Marvel')) ? `marvelLogo.png`: `dcLogo.png`;
-
-    console.log(heroInfo)
+    
+    const handleReturn = () => {
+        navigate(-1 , {replace:false});
+    }
     return (
         <div className="container my-5">
+            
+            {/* Prueba useMemo */}
+            {counter} 
+            <Button className="my-3" appearance="ghost" onClick={()=> setCounter(counter + 1)}>sumar</Button>
+
+
             <Panel style={{ width: "100%" }} bodyFill>
                 <FlexboxGrid justify="center">
                     <FlexboxGrid.Item as={Col}  className={styles.heroImgDiv}>
@@ -44,7 +56,7 @@ const HeroScreen = () => {
                                     <Divider className={styles.bgDivider}></Divider>
                                 </FlexboxGrid.Item>
                                 <FlexboxGrid.Item as={Col} xs={8} className={styles.logoDiv}>
-                                    <img src={logoPath} className={styles.logoImg}/>
+                                    <img src={logoPath} className={styles.logoImg} alt={superhero}/>
                                 </FlexboxGrid.Item>
                                 <FlexboxGrid.Item as={Col} xs={24}>
                                     <h4>Primera aparición </h4>
@@ -55,11 +67,11 @@ const HeroScreen = () => {
                                     <h4>Alter Ego </h4>
                                     <h5>{alter_ego}</h5>
                                     <Divider className={styles.bgDivider}></Divider>
-
-                                </FlexboxGrid.Item>
-                                <FlexboxGrid.Item as={Col} xs={24}>
                                     <h4>Characters </h4>
-                                    <p>{characters}</p>
+                                    <p className="mb-4" >{characters}</p>
+                                    <Button     color="blue" 
+                                                appearance="ghost" 
+                                                onClick={handleReturn}>regresar</Button>
                                 </FlexboxGrid.Item>
                             </FlexboxGrid>
                         </div>
