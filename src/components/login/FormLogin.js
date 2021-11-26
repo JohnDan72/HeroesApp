@@ -9,7 +9,7 @@ import { FcGoogle } from 'react-icons/fc';
 
 // import PropTypes from 'prop-types';
 
-import TextField from './TexField';
+import TextField from '../textfieldsForm/TexField';
 
 // logo
 import logo from "../../media/img/logo.png";
