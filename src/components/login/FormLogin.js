@@ -1,7 +1,7 @@
-import React from 'react';
-import { Button, ButtonToolbar, Col, Divider, FlexboxGrid, Form } from 'rsuite';
-import { useNavigate  } from 'react-router-dom'
-
+import React, { useContext } from 'react';
+// import JSONView from '../ui/JSONView';
+import { Button, ButtonToolbar, Col, Divider, FlexboxGrid, Form, Loader, Message } from 'rsuite';
+import { useNavigate } from 'react-router-dom'
 // icons
 import { BiSend } from 'react-icons/bi';
 import { FcGoogle } from 'react-icons/fc';
@@ -15,6 +15,10 @@ import TextField from '../textfieldsForm/TexField';
 import logo from "../../media/img/logo.png";
 import styles from "./FormLogin.module.css";
 import model from '../../models/login/formModel';
+import { loginUser } from '../../selectors/loginUser';
+import { useForm } from '../../hooks/useForm';
+import { GeneralContext } from '../../GeneralContext';
+import { types } from '../../types/types';
 
 
 
@@ -23,20 +27,36 @@ const defaultProps = {};
 
 
 const FormLogin = () => {
-
     const navigate = useNavigate();
 
-    const handleLogin = (status) => {
-        console.log("Login!!!");
-        console.log(status);
-        navigate('/' , {
-            replace: true
-        })
-        return;
+    const { formValue, handleInputChange, resetForm, setFormError, setLoading } = useForm({
+        email: 'juan1@gmail.com',
+        password: 'xdlol1234'
+    });
+    const { status: status_error, error_msg } = formValue.error;
+    const { loading, email, password } = formValue;
+
+    const { dispatch } = useContext(GeneralContext);
+
+    const handleLogin = async (formStatus) => {
+        if (formStatus) {
+            setLoading(true); //load while authenticate
+            const success = await loginUser(email, password);
+
+            if (success) {
+                resetForm();
+                dispatch({ type: types.login, payload: success });
+                navigate('/');
+            }
+            else {
+                setFormError(true, 'Email y/o password incorrectos');
+            }
+        }
     }
 
     return (
         <div className="container mt-5">
+            {/* <JSONView formValue={formValue} /> */}
             <FlexboxGrid justify="center">
                 {/* logo */}
                 <FlexboxGrid.Item as={Col} xs={24}>
@@ -50,17 +70,19 @@ const FormLogin = () => {
                 <FlexboxGrid.Item as={Col} xs={20} sm={18} md={12} className="mt-5">
                     <Form
                         // ref={formRef}
-                        // onChange={setFormValue}
-                        // onCheck={setFormError}
-                        // formValue={formValue}
+                        formValue={{ email, password }}
                         onSubmit={handleLogin}
                         fluid
                         model={model}
                     >
 
-                        <TextField name="email" label="Email"  />
+                        <TextField name="email"
+                            label="Email"
+                            value={email}
+                            onChange={(value) => handleInputChange({ name: 'email', value })} />
                         <TextField name="password"
                             label="Password"
+                            value={password}
                             type="password"
                             autoComplete="off"
                             helpBlock={
@@ -70,19 +92,35 @@ const FormLogin = () => {
                                     </Button>
                                 </span>
 
-                            } />
+                            } onChange={(value) => handleInputChange({ name: 'password', value })} />
 
-                        <ButtonToolbar className="mt-5">
-                            <Button appearance="primary" type="submit" block className={styles.centerButton}>
-                                Submit
-                                <BiSend style={{ marginLeft: '10px' }} />
-                            </Button>
+                        {   //se muestra loading o button si esta cargando
+                            loading
+                                ? (
+                                    <div className={styles.loadingStyle}>
+                                        <Loader size="md" />
+                                    </div>
+                                )
+                                : (
+                                    <ButtonToolbar className="mt-5">
+                                        <Button appearance="primary" type="submit" block className={styles.centerButton}>
+                                            Submit
+                                            <BiSend style={{ marginLeft: '10px' }} />
+                                        </Button>
+                                    </ButtonToolbar>
+                                )
+                        }
 
-                        </ButtonToolbar>
                     </Form>
                 </FlexboxGrid.Item>
                 {/* divider */}
                 <FlexboxGrid.Item as={Col} xs={20} sm={18} md={13} className="mt-4" >
+                    {
+                        status_error &&
+                        <Message showIcon type="error">
+                            {error_msg}
+                        </Message>
+                    }
                     <Divider> ó </Divider>
                 </FlexboxGrid.Item>
                 {/* google sign */}
@@ -95,12 +133,11 @@ const FormLogin = () => {
                 {/* create account */}
                 <FlexboxGrid.Item as={Col} xs={24} className={`mt-4 ${styles.googleDiv}`} >
                     <span className={styles.newAccount}>
-                    Nuevo en Heroes App?
+                        Nuevo en Heroes App?
                         <Button appearance="link" size="sm" type="button">
-                        Crea una cuenta
+                            Crea una cuenta
                         </Button>
                     </span>
-                    
                 </FlexboxGrid.Item>
             </FlexboxGrid>
         </div>

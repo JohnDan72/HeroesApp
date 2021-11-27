@@ -5,6 +5,8 @@ import logoPath from '../../media/img/logoCircle.png';
 import { IconButton, Nav, Sidebar, Sidenav } from 'rsuite';
 import { GeneralContext } from '../../GeneralContext';
 import { CustomNavLink } from './CustomNavLink';
+import { types } from '../../types/types';
+import { useNavigate } from 'react-router-dom';
 
 // styles
 import styles from './SideNavBar.module.css';
@@ -18,8 +20,19 @@ import { ArrowLeftLine, ArrowRightLine } from '@rsuite/icons';
 
 
 const SideNavBar = () => {
+    const navigate = useNavigate();
     const [expanded, setExpanded] = useState(false);
-    const { setTheme, active, setActive } = useContext(GeneralContext);
+    const { user , dispatch , setTheme , active , setActive } = useContext(GeneralContext);
+
+    const handleLogout = () => {
+        dispatch({
+            type: types.logout
+        });
+        navigate('/login' , {
+            replace: true
+        });
+        
+    }
 
     return (
         <Sidebar className="hideSidebar"
@@ -54,8 +67,8 @@ const SideNavBar = () => {
                             <Nav.Dropdown.Item icon={<MdDarkMode />} eventKey='dark' onClick={() => setTheme('dark')}> Mode dark</Nav.Dropdown.Item>
                         </Nav.Dropdown>
 
-                        <Nav.Dropdown title="Account" icon={<BsFillPersonFill />}>
-                            <Nav.Dropdown.Item as={CustomNavLink} href="/login" icon={<FiLogOut />}>Logout</Nav.Dropdown.Item>
+                        <Nav.Dropdown title={user.name} icon={<BsFillPersonFill />}>
+                            <Nav.Dropdown.Item  icon={<FiLogOut />} onClick={handleLogout}>Logout</Nav.Dropdown.Item>
                         </Nav.Dropdown>
 
                         <IconButton icon={expanded ? <ArrowLeftLine /> : <ArrowRightLine />}

@@ -12,17 +12,23 @@ import { GiBatMask, GiMaskedSpider } from 'react-icons/gi';
 import { MdColorLens, MdDarkMode, MdLightMode } from 'react-icons/md';
 import { FiLogOut } from 'react-icons/fi';
 import logoPath from '../../media/img/logoCircle.png';
+import { types } from '../../types/types';
 
 
 const propTypes = {};
 const defaultProps = {};
 
 const MiNavBar = () => {
+
+    const { user , dispatch } = useContext(GeneralContext);
+
     const navigate = useNavigate();
     const { setTheme, active, setActive } = useContext(GeneralContext);
 
     const handleLogout = () => {
-        console.log("Log out !!!")
+        dispatch({
+            type: types.logout
+        });
         navigate('/login' , {
             replace: true
         })
@@ -45,7 +51,7 @@ const MiNavBar = () => {
                         <Nav.Dropdown.Item as={CustomNavLink} icon={<MdLightMode />} eventKey='light' onClick={() => setTheme('light')}> Mode light</Nav.Dropdown.Item>
                         <Nav.Dropdown.Item as={CustomNavLink} icon={<MdDarkMode />} eventKey='dark' onClick={() => setTheme('dark')}> Mode dark</Nav.Dropdown.Item>
                     </Nav.Dropdown>
-                    <Nav.Dropdown title="Account" icon={<BsFillPersonFill />}>
+                    <Nav.Dropdown title={user.name} icon={<BsFillPersonFill />}>
                         <Nav.Dropdown.Item as={CustomNavLink} icon={<FiLogOut />} onClick={handleLogout}>Logout</Nav.Dropdown.Item>
                     </Nav.Dropdown>
                 </Nav>

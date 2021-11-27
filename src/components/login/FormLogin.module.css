@@ -35,3 +35,8 @@
     align-items: center;
     justify-content: center;
 }
+
+.loadingStyle{
+    width: 100%;
+    text-align: center;
+}

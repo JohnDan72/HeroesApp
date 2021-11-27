@@ -31,7 +31,7 @@ const HeroCard = ({
 
     const imagPath = `/assets/${id}.jpg`;
     return (
-        <Panel bodyFill className={styles.rsPanel}>
+        <Panel bodyFill className={`${styles.rsPanel} animate__animated animate__fadeIn`}>
             <img src={imagPath} className={styles.imgCard} alt={superhero} />
             <Panel>
                 <Button appearance="subtle" onClick={handleClick}>{superhero}</Button>
