@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas al AppRouter debe renderizar el componente correctamente 1`] = `
+<BrowserRouter>
+  <Routes>
+    <Route
+      element={
+        <PublicRoute>
+          <LoginScreen />
+        </PublicRoute>
+      }
+      exact={true}
+      path="/login"
+    />
+    <Route
+      element={
+        <PrivateRoute>
+          <DashboardRouter />
+        </PrivateRoute>
+      }
+      exact={true}
+      path="/*"
+    />
+    <Route
+      element={<NotFound />}
+      path="*"
+    />
+  </Routes>
+</BrowserRouter>
+`;

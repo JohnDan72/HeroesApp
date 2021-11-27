@@ -4,11 +4,11 @@ import './index.css';
 import './customBootstrap.css';
 import 'rsuite/styles/index.less';
 
-import AppRouter from './routes/AppRouter';
+import MainApp from './MainApp';
 
 
 ReactDOM.render(
-    <AppRouter />
+    <MainApp />
     ,
   document.getElementById('root')
 );

@@ -75,7 +75,7 @@ const FormLogin = () => {
                 </FlexboxGrid.Item>
                 {/* título */}
                 <FlexboxGrid.Item as={Col} xs={24} className="mt-3">
-                    <h4 className={styles.textCenter}>Bienvenido a Heroes App</h4>
+                    <h4 id="id_bienvenida" className={styles.textCenter}>Bienvenido a Heroes App</h4>
                 </FlexboxGrid.Item>
                 {/* form */}
                 <FlexboxGrid.Item as={Col} xs={20} sm={18} md={12} className="mt-5">
