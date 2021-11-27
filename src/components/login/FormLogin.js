@@ -29,7 +29,7 @@ const defaultProps = {};
 const FormLogin = () => {
     const navigate = useNavigate();
 
-    const { formValue, handleInputChange, resetForm, setFormError, setLoading } = useForm({
+    const { formValue, handleInputChange, setFormError, setLoading , resetForm } = useForm({
         email: 'juan1@gmail.com',
         password: 'xdlol1234'
     });
@@ -38,19 +38,30 @@ const FormLogin = () => {
 
     const { dispatch } = useContext(GeneralContext);
 
-    const handleLogin = async (formStatus) => {
+    const handleLogin = (formStatus) => {
         if (formStatus) {
             setLoading(true); //load while authenticate
-            const success = await loginUser(email, password);
 
-            if (success) {
-                resetForm();
-                dispatch({ type: types.login, payload: success });
-                navigate('/');
-            }
-            else {
-                setFormError(true, 'Email y/o password incorrectos');
-            }
+            // NOTA:    tener cuidado con funciones async 
+            //          ya que no funciona bien por el cambio 
+            //          de state en PublicRoute
+            loginUser(email, password)
+                .then(userData => {
+                    if (userData) {
+                        resetForm();
+                        dispatch({ type: types.login, payload: userData });
+
+                        const lastPath = localStorage.getItem('lastPath') || '/marvel';
+
+                        navigate(lastPath, {
+                            replace: true
+                        });
+                    }
+                    else {
+                        setFormError(true, 'Email y/o password incorrectos');
+                    }
+                });
+
         }
     }
 

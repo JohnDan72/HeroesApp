@@ -6,6 +6,7 @@ import { GeneralContext } from "../GeneralContext"
 export const PublicRoute = ({ children }) => {
 
     const { user } = useContext(GeneralContext);
+    const lastPath = localStorage.getItem('lastPath');
 
-    return (!user.logged)? children : <Navigate to="/" />;
+    return (!user.logged)? children : <Navigate to={lastPath} />;
 }

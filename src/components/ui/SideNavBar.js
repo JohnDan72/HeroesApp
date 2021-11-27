@@ -28,9 +28,7 @@ const SideNavBar = () => {
         dispatch({
             type: types.logout
         });
-        navigate('/login' , {
-            replace: true
-        });
+        navigate('/login');
         
     }
 

@@ -29,9 +29,7 @@ const MiNavBar = () => {
         dispatch({
             type: types.logout
         });
-        navigate('/login' , {
-            replace: true
-        })
+        navigate('/login')
     }
     return (
 

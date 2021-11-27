@@ -24,9 +24,7 @@ const HeroCard = ({
 }) => {
     const navigate = useNavigate();
     const handleClick = () => {
-        return navigate(`/hero/${id}`, {
-            replace: true
-        })
+        return navigate(`/hero/${id}`)
     }
 
     const imagPath = `/assets/${id}.jpg`;
