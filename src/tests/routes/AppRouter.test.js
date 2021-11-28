@@ -26,7 +26,8 @@ describe('Pruebas al AppRouter', () => {
         );
 
         const bienvenida = wrapper.find('#id_bienvenida');
-
+        
+        expect(wrapper).toMatchSnapshot();
         expect(bienvenida.exists()).toBe(true);
         expect(bienvenida.text().trim()).toBe(expected);
     });
@@ -47,7 +48,7 @@ describe('Pruebas al AppRouter', () => {
         );
 
         const bienvenida = wrapper.find('#id_bienvenida');
-
+        expect(wrapper).toMatchSnapshot();
         expect(bienvenida.exists()).toBe(false);
     });
     

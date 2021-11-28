@@ -29,7 +29,7 @@ const defaultProps = {};
 const FormLogin = () => {
     const navigate = useNavigate();
 
-    const { formValue, handleInputChange, setFormError, setLoading , resetForm } = useForm({
+    const { formValue, handleInputChange, setFormError, setLoading, resetForm } = useForm({
         email: 'juan1@gmail.com',
         password: 'xdlol1234'
     });
@@ -48,6 +48,7 @@ const FormLogin = () => {
             loginUser(email, password)
                 .then(userData => {
                     if (userData) {
+                        console.log("Sucess!!!");
                         resetForm();
                         dispatch({ type: types.login, payload: userData });
 
@@ -58,10 +59,11 @@ const FormLogin = () => {
                         });
                     }
                     else {
+                        console.log("Fail!!!");
+
                         setFormError(true, 'Email y/o password incorrectos');
                     }
                 });
-
         }
     }
 
@@ -88,10 +90,12 @@ const FormLogin = () => {
                     >
 
                         <TextField name="email"
+                            id="id_email_input"
                             label="Email"
                             value={email}
                             onChange={(value) => handleInputChange({ name: 'email', value })} />
                         <TextField name="password"
+                            id="id_password_input"
                             label="Password"
                             value={password}
                             type="password"

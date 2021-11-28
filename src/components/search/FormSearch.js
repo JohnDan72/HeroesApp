@@ -22,6 +22,7 @@ const FormSearch = ({ handleSearch , handleInputChange , formRef , formValue}) =
                 model={searchModel} 
                 onSubmit={handleSearch} >
             <TextFieldButton
+                id="id_search_input"
                 name="search"
                 value={formValue.search}
                 icon={<Search />}

@@ -3,12 +3,12 @@ import { Form, InputGroup } from 'rsuite';
 
 
 
-const TextFieldButton = ({ name, label, accepter, helpBlock, btnType, icon, ...rest }) => {
+const TextFieldButton = ({ id,name, label, accepter, helpBlock, btnType, icon, ...rest }) => {
     return (
-        <Form.Group >
+        <Form.Group controlId={id}>
             <InputGroup style={{ width: "100%"}}>
                 <Form.Control
-                
+                    id={id}
                     name={name}
                     accepter={accepter}
                     {...rest}

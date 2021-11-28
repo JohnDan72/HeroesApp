@@ -13,6 +13,7 @@ import { getHeroesByText } from '../../selectors/getHeroesByText';
 import { Icon } from '@rsuite/icons';
 import { BiSearchAlt2 } from 'react-icons/bi';
 
+
 const propTypes = {};
 const defaultProps = {};
 
@@ -23,12 +24,13 @@ const SearchScreen = () => {
     const { query = '' } = queryString.parse(location.search);
 
     const formRef = useRef();
-    const { formValue, handleInputChange } = useForm({ search: query });
+    const { formValue, handleInputChange } = useForm({ search: query, input_2: '' , input_3: '' });
     const results = useMemo(() => getHeroesByText(query), [query]);
 
 
     const handleSearch = (status) => {
-        console.log(`Status: ${status}`);
+        // console.log(`Status: ${status}`);
+        // console.log("search: " + formValue.search);
         if (status) {
             navigate(`?query=${formValue.search}`);
         }

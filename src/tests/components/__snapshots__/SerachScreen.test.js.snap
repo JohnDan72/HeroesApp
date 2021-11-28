@@ -1,0 +1,1280 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en SearchScreen debe mostrar component correctamente 1`] = `
+<div
+  className="container my-5"
+>
+  <div
+    aria-orientation="horizontal"
+    className="rs-divider rs-divider-horizontal rs-divider-with-text"
+    role="separator"
+  >
+    <span
+      className="rs-divider-inner-text"
+    >
+      <svg
+        aria-hidden={true}
+        className="rs-icon"
+        fill="currentColor"
+        focusable={false}
+        height="1em"
+        stroke="currentColor"
+        strokeWidth="0"
+        style={
+          Object {
+            "color": undefined,
+            "fontSize": "26px",
+          }
+        }
+        viewBox="0 0 24 24"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M19.023 16.977a35.13 35.13 0 0 1-1.367-1.384c-.372-.378-.596-.653-.596-.653l-2.8-1.337A6.962 6.962 0 0 0 16 9c0-3.859-3.14-7-7-7S2 5.141 2 9s3.14 7 7 7c1.763 0 3.37-.66 4.603-1.739l1.337 2.8s.275.224.653.596c.387.363.896.854 1.384 1.367l1.358 1.392.604.646 2.121-2.121-.646-.604c-.379-.372-.885-.866-1.391-1.36zM9 14c-2.757 0-5-2.243-5-5s2.243-5 5-5 5 2.243 5 5-2.243 5-5 5z"
+          key="0"
+        />
+      </svg>
+    </span>
+  </div>
+  <div
+    className="rs-flex-box-grid rs-flex-box-grid-top rs-flex-box-grid-center"
+  >
+    <div
+      className="rs-flex-box-grid-item rs-flex-box-grid-item-0 rs-col"
+      role="gridcell"
+    >
+      <h4>
+        Búsqueda
+      </h4>
+    </div>
+    <div
+      className="rs-flex-box-grid-item rs-flex-box-grid-item-0 rs-col rs-col-xs-20"
+      role="gridcell"
+    >
+      <form
+        className="rs-form rs-form-vertical rs-form-fixed-width"
+        onSubmit={[Function]}
+      >
+        <div
+          className="rs-form-group"
+          role="group"
+        >
+          <div
+            className="rs-input-group"
+            style={
+              Object {
+                "width": "100%",
+              }
+            }
+          >
+            <div
+              className="rs-form-control rs-form-control-wrapper"
+            >
+              <input
+                aria-describedby="id_search_input-help-text"
+                aria-labelledby="id_search_input-control-label"
+                className="rs-input"
+                id="id_search_input"
+                name="search"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                placeholder="Busca tu héroe favorito"
+                type="text"
+                value=""
+              />
+            </div>
+            <button
+              className="rs-input-group-addon rs-input-group-btn rs-btn rs-btn-default"
+              type="submit"
+            >
+              <svg
+                aria-hidden={true}
+                aria-label="search"
+                className="rs-icon"
+                data-category="action"
+                fill="currentColor"
+                focusable={false}
+                height="1em"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M6.5 1a5.5 5.5 0 110 11 5.5 5.5 0 110-11zm0 1a4.5 4.5 0 100 9 4.5 4.5 0 000-9z"
+                />
+                <path
+                  d="M9.646 9.646a.5.5 0 01.638-.058l.069.058 4.5 4.5a.5.5 0 01-.638.765l-.069-.058-4.5-4.5a.5.5 0 010-.707z"
+                />
+              </svg>
+              <span
+                className="rs-ripple-pond"
+              >
+                <span
+                  className="rs-ripple"
+                />
+              </span>
+            </button>
+          </div>
+          <span
+            className="rs-form-help-text"
+            id="id_search_input-help-text"
+          />
+        </div>
+      </form>
+    </div>
+  </div>
+  <h5>
+    Resultados (
+    20
+    )
+  </h5>
+  <div
+    className="mt-3 rs-flex-box-grid-item rs-flex-box-grid-item-0 rs-col"
+    role="gridcell"
+  >
+    <div
+      className="rsPanel animate__animated animate__fadeIn rs-panel"
+    >
+      <div
+        className="rs-panel-body rs-panel-body-fill"
+        role="region"
+      >
+        <img
+          alt="Batman"
+          className="imgCard"
+          src="/assets/dc-batman.jpg"
+        />
+        <div
+          className="rs-panel"
+        >
+          <div
+            className="rs-panel-body"
+            role="region"
+          >
+            <button
+              className="rs-btn rs-btn-subtle"
+              onClick={[Function]}
+              type="button"
+            >
+              Batman
+              <span
+                className="rs-ripple-pond"
+              >
+                <span
+                  className="rs-ripple"
+                />
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="mt-3 rs-flex-box-grid-item rs-flex-box-grid-item-0 rs-col"
+    role="gridcell"
+  >
+    <div
+      className="rsPanel animate__animated animate__fadeIn rs-panel"
+    >
+      <div
+        className="rs-panel-body rs-panel-body-fill"
+        role="region"
+      >
+        <img
+          alt="Superman"
+          className="imgCard"
+          src="/assets/dc-superman.jpg"
+        />
+        <div
+          className="rs-panel"
+        >
+          <div
+            className="rs-panel-body"
+            role="region"
+          >
+            <button
+              className="rs-btn rs-btn-subtle"
+              onClick={[Function]}
+              type="button"
+            >
+              Superman
+              <span
+                className="rs-ripple-pond"
+              >
+                <span
+                  className="rs-ripple"
+                />
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="mt-3 rs-flex-box-grid-item rs-flex-box-grid-item-0 rs-col"
+    role="gridcell"
+  >
+    <div
+      className="rsPanel animate__animated animate__fadeIn rs-panel"
+    >
+      <div
+        className="rs-panel-body rs-panel-body-fill"
+        role="region"
+      >
+        <img
+          alt="Flash"
+          className="imgCard"
+          src="/assets/dc-flash.jpg"
+        />
+        <div
+          className="rs-panel"
+        >
+          <div
+            className="rs-panel-body"
+            role="region"
+          >
+            <button
+              className="rs-btn rs-btn-subtle"
+              onClick={[Function]}
+              type="button"
+            >
+              Flash
+              <span
+                className="rs-ripple-pond"
+              >
+                <span
+                  className="rs-ripple"
+                />
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="mt-3 rs-flex-box-grid-item rs-flex-box-grid-item-0 rs-col"
+    role="gridcell"
+  >
+    <div
+      className="rsPanel animate__animated animate__fadeIn rs-panel"
+    >
+      <div
+        className="rs-panel-body rs-panel-body-fill"
+        role="region"
+      >
+        <img
+          alt="Green Lantern"
+          className="imgCard"
+          src="/assets/dc-green.jpg"
+        />
+        <div
+          className="rs-panel"
+        >
+          <div
+            className="rs-panel-body"
+            role="region"
+          >
+            <button
+              className="rs-btn rs-btn-subtle"
+              onClick={[Function]}
+              type="button"
+            >
+              Green Lantern
+              <span
+                className="rs-ripple-pond"
+              >
+                <span
+                  className="rs-ripple"
+                />
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="mt-3 rs-flex-box-grid-item rs-flex-box-grid-item-0 rs-col"
+    role="gridcell"
+  >
+    <div
+      className="rsPanel animate__animated animate__fadeIn rs-panel"
+    >
+      <div
+        className="rs-panel-body rs-panel-body-fill"
+        role="region"
+      >
+        <img
+          alt="Green Arrow"
+          className="imgCard"
+          src="/assets/dc-arrow.jpg"
+        />
+        <div
+          className="rs-panel"
+        >
+          <div
+            className="rs-panel-body"
+            role="region"
+          >
+            <button
+              className="rs-btn rs-btn-subtle"
+              onClick={[Function]}
+              type="button"
+            >
+              Green Arrow
+              <span
+                className="rs-ripple-pond"
+              >
+                <span
+                  className="rs-ripple"
+                />
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="mt-3 rs-flex-box-grid-item rs-flex-box-grid-item-0 rs-col"
+    role="gridcell"
+  >
+    <div
+      className="rsPanel animate__animated animate__fadeIn rs-panel"
+    >
+      <div
+        className="rs-panel-body rs-panel-body-fill"
+        role="region"
+      >
+        <img
+          alt="Wonder Woman"
+          className="imgCard"
+          src="/assets/dc-wonder.jpg"
+        />
+        <div
+          className="rs-panel"
+        >
+          <div
+            className="rs-panel-body"
+            role="region"
+          >
+            <button
+              className="rs-btn rs-btn-subtle"
+              onClick={[Function]}
+              type="button"
+            >
+              Wonder Woman
+              <span
+                className="rs-ripple-pond"
+              >
+                <span
+                  className="rs-ripple"
+                />
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="mt-3 rs-flex-box-grid-item rs-flex-box-grid-item-0 rs-col"
+    role="gridcell"
+  >
+    <div
+      className="rsPanel animate__animated animate__fadeIn rs-panel"
+    >
+      <div
+        className="rs-panel-body rs-panel-body-fill"
+        role="region"
+      >
+        <img
+          alt="Martian Manhunter"
+          className="imgCard"
+          src="/assets/dc-martian.jpg"
+        />
+        <div
+          className="rs-panel"
+        >
+          <div
+            className="rs-panel-body"
+            role="region"
+          >
+            <button
+              className="rs-btn rs-btn-subtle"
+              onClick={[Function]}
+              type="button"
+            >
+              Martian Manhunter
+              <span
+                className="rs-ripple-pond"
+              >
+                <span
+                  className="rs-ripple"
+                />
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="mt-3 rs-flex-box-grid-item rs-flex-box-grid-item-0 rs-col"
+    role="gridcell"
+  >
+    <div
+      className="rsPanel animate__animated animate__fadeIn rs-panel"
+    >
+      <div
+        className="rs-panel-body rs-panel-body-fill"
+        role="region"
+      >
+        <img
+          alt="Robin/Nightwing"
+          className="imgCard"
+          src="/assets/dc-robin.jpg"
+        />
+        <div
+          className="rs-panel"
+        >
+          <div
+            className="rs-panel-body"
+            role="region"
+          >
+            <button
+              className="rs-btn rs-btn-subtle"
+              onClick={[Function]}
+              type="button"
+            >
+              Robin/Nightwing
+              <span
+                className="rs-ripple-pond"
+              >
+                <span
+                  className="rs-ripple"
+                />
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="mt-3 rs-flex-box-grid-item rs-flex-box-grid-item-0 rs-col"
+    role="gridcell"
+  >
+    <div
+      className="rsPanel animate__animated animate__fadeIn rs-panel"
+    >
+      <div
+        className="rs-panel-body rs-panel-body-fill"
+        role="region"
+      >
+        <img
+          alt="Blue Beetle"
+          className="imgCard"
+          src="/assets/dc-blue.jpg"
+        />
+        <div
+          className="rs-panel"
+        >
+          <div
+            className="rs-panel-body"
+            role="region"
+          >
+            <button
+              className="rs-btn rs-btn-subtle"
+              onClick={[Function]}
+              type="button"
+            >
+              Blue Beetle
+              <span
+                className="rs-ripple-pond"
+              >
+                <span
+                  className="rs-ripple"
+                />
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="mt-3 rs-flex-box-grid-item rs-flex-box-grid-item-0 rs-col"
+    role="gridcell"
+  >
+    <div
+      className="rsPanel animate__animated animate__fadeIn rs-panel"
+    >
+      <div
+        className="rs-panel-body rs-panel-body-fill"
+        role="region"
+      >
+        <img
+          alt="Black Canary"
+          className="imgCard"
+          src="/assets/dc-black.jpg"
+        />
+        <div
+          className="rs-panel"
+        >
+          <div
+            className="rs-panel-body"
+            role="region"
+          >
+            <button
+              className="rs-btn rs-btn-subtle"
+              onClick={[Function]}
+              type="button"
+            >
+              Black Canary
+              <span
+                className="rs-ripple-pond"
+              >
+                <span
+                  className="rs-ripple"
+                />
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="mt-3 rs-flex-box-grid-item rs-flex-box-grid-item-0 rs-col"
+    role="gridcell"
+  >
+    <div
+      className="rsPanel animate__animated animate__fadeIn rs-panel"
+    >
+      <div
+        className="rs-panel-body rs-panel-body-fill"
+        role="region"
+      >
+        <img
+          alt="Spider Man"
+          className="imgCard"
+          src="/assets/marvel-spider.jpg"
+        />
+        <div
+          className="rs-panel"
+        >
+          <div
+            className="rs-panel-body"
+            role="region"
+          >
+            <button
+              className="rs-btn rs-btn-subtle"
+              onClick={[Function]}
+              type="button"
+            >
+              Spider Man
+              <span
+                className="rs-ripple-pond"
+              >
+                <span
+                  className="rs-ripple"
+                />
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="mt-3 rs-flex-box-grid-item rs-flex-box-grid-item-0 rs-col"
+    role="gridcell"
+  >
+    <div
+      className="rsPanel animate__animated animate__fadeIn rs-panel"
+    >
+      <div
+        className="rs-panel-body rs-panel-body-fill"
+        role="region"
+      >
+        <img
+          alt="Captain America"
+          className="imgCard"
+          src="/assets/marvel-captain.jpg"
+        />
+        <div
+          className="rs-panel"
+        >
+          <div
+            className="rs-panel-body"
+            role="region"
+          >
+            <button
+              className="rs-btn rs-btn-subtle"
+              onClick={[Function]}
+              type="button"
+            >
+              Captain America
+              <span
+                className="rs-ripple-pond"
+              >
+                <span
+                  className="rs-ripple"
+                />
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="mt-3 rs-flex-box-grid-item rs-flex-box-grid-item-0 rs-col"
+    role="gridcell"
+  >
+    <div
+      className="rsPanel animate__animated animate__fadeIn rs-panel"
+    >
+      <div
+        className="rs-panel-body rs-panel-body-fill"
+        role="region"
+      >
+        <img
+          alt="Iron Man"
+          className="imgCard"
+          src="/assets/marvel-iron.jpg"
+        />
+        <div
+          className="rs-panel"
+        >
+          <div
+            className="rs-panel-body"
+            role="region"
+          >
+            <button
+              className="rs-btn rs-btn-subtle"
+              onClick={[Function]}
+              type="button"
+            >
+              Iron Man
+              <span
+                className="rs-ripple-pond"
+              >
+                <span
+                  className="rs-ripple"
+                />
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="mt-3 rs-flex-box-grid-item rs-flex-box-grid-item-0 rs-col"
+    role="gridcell"
+  >
+    <div
+      className="rsPanel animate__animated animate__fadeIn rs-panel"
+    >
+      <div
+        className="rs-panel-body rs-panel-body-fill"
+        role="region"
+      >
+        <img
+          alt="Thor"
+          className="imgCard"
+          src="/assets/marvel-thor.jpg"
+        />
+        <div
+          className="rs-panel"
+        >
+          <div
+            className="rs-panel-body"
+            role="region"
+          >
+            <button
+              className="rs-btn rs-btn-subtle"
+              onClick={[Function]}
+              type="button"
+            >
+              Thor
+              <span
+                className="rs-ripple-pond"
+              >
+                <span
+                  className="rs-ripple"
+                />
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="mt-3 rs-flex-box-grid-item rs-flex-box-grid-item-0 rs-col"
+    role="gridcell"
+  >
+    <div
+      className="rsPanel animate__animated animate__fadeIn rs-panel"
+    >
+      <div
+        className="rs-panel-body rs-panel-body-fill"
+        role="region"
+      >
+        <img
+          alt="Hulk"
+          className="imgCard"
+          src="/assets/marvel-hulk.jpg"
+        />
+        <div
+          className="rs-panel"
+        >
+          <div
+            className="rs-panel-body"
+            role="region"
+          >
+            <button
+              className="rs-btn rs-btn-subtle"
+              onClick={[Function]}
+              type="button"
+            >
+              Hulk
+              <span
+                className="rs-ripple-pond"
+              >
+                <span
+                  className="rs-ripple"
+                />
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="mt-3 rs-flex-box-grid-item rs-flex-box-grid-item-0 rs-col"
+    role="gridcell"
+  >
+    <div
+      className="rsPanel animate__animated animate__fadeIn rs-panel"
+    >
+      <div
+        className="rs-panel-body rs-panel-body-fill"
+        role="region"
+      >
+        <img
+          alt="Wolverine"
+          className="imgCard"
+          src="/assets/marvel-wolverine.jpg"
+        />
+        <div
+          className="rs-panel"
+        >
+          <div
+            className="rs-panel-body"
+            role="region"
+          >
+            <button
+              className="rs-btn rs-btn-subtle"
+              onClick={[Function]}
+              type="button"
+            >
+              Wolverine
+              <span
+                className="rs-ripple-pond"
+              >
+                <span
+                  className="rs-ripple"
+                />
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="mt-3 rs-flex-box-grid-item rs-flex-box-grid-item-0 rs-col"
+    role="gridcell"
+  >
+    <div
+      className="rsPanel animate__animated animate__fadeIn rs-panel"
+    >
+      <div
+        className="rs-panel-body rs-panel-body-fill"
+        role="region"
+      >
+        <img
+          alt="Daredevil"
+          className="imgCard"
+          src="/assets/marvel-daredevil.jpg"
+        />
+        <div
+          className="rs-panel"
+        >
+          <div
+            className="rs-panel-body"
+            role="region"
+          >
+            <button
+              className="rs-btn rs-btn-subtle"
+              onClick={[Function]}
+              type="button"
+            >
+              Daredevil
+              <span
+                className="rs-ripple-pond"
+              >
+                <span
+                  className="rs-ripple"
+                />
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="mt-3 rs-flex-box-grid-item rs-flex-box-grid-item-0 rs-col"
+    role="gridcell"
+  >
+    <div
+      className="rsPanel animate__animated animate__fadeIn rs-panel"
+    >
+      <div
+        className="rs-panel-body rs-panel-body-fill"
+        role="region"
+      >
+        <img
+          alt="Hawkeye"
+          className="imgCard"
+          src="/assets/marvel-hawkeye.jpg"
+        />
+        <div
+          className="rs-panel"
+        >
+          <div
+            className="rs-panel-body"
+            role="region"
+          >
+            <button
+              className="rs-btn rs-btn-subtle"
+              onClick={[Function]}
+              type="button"
+            >
+              Hawkeye
+              <span
+                className="rs-ripple-pond"
+              >
+                <span
+                  className="rs-ripple"
+                />
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="mt-3 rs-flex-box-grid-item rs-flex-box-grid-item-0 rs-col"
+    role="gridcell"
+  >
+    <div
+      className="rsPanel animate__animated animate__fadeIn rs-panel"
+    >
+      <div
+        className="rs-panel-body rs-panel-body-fill"
+        role="region"
+      >
+        <img
+          alt="Cyclops"
+          className="imgCard"
+          src="/assets/marvel-cyclops.jpg"
+        />
+        <div
+          className="rs-panel"
+        >
+          <div
+            className="rs-panel-body"
+            role="region"
+          >
+            <button
+              className="rs-btn rs-btn-subtle"
+              onClick={[Function]}
+              type="button"
+            >
+              Cyclops
+              <span
+                className="rs-ripple-pond"
+              >
+                <span
+                  className="rs-ripple"
+                />
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="mt-3 rs-flex-box-grid-item rs-flex-box-grid-item-0 rs-col"
+    role="gridcell"
+  >
+    <div
+      className="rsPanel animate__animated animate__fadeIn rs-panel"
+    >
+      <div
+        className="rs-panel-body rs-panel-body-fill"
+        role="region"
+      >
+        <img
+          alt="Silver Surfer"
+          className="imgCard"
+          src="/assets/marvel-silver.jpg"
+        />
+        <div
+          className="rs-panel"
+        >
+          <div
+            className="rs-panel-body"
+            role="region"
+          >
+            <button
+              className="rs-btn rs-btn-subtle"
+              onClick={[Function]}
+              type="button"
+            >
+              Silver Surfer
+              <span
+                className="rs-ripple-pond"
+              >
+                <span
+                  className="rs-ripple"
+                />
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Pruebas en SearchScreen debe mostrar result por queryParameters correctamente 1`] = `
+<div
+  className="container my-5"
+>
+  <div
+    aria-orientation="horizontal"
+    className="rs-divider rs-divider-horizontal rs-divider-with-text"
+    role="separator"
+  >
+    <span
+      className="rs-divider-inner-text"
+    >
+      <svg
+        aria-hidden={true}
+        className="rs-icon"
+        fill="currentColor"
+        focusable={false}
+        height="1em"
+        stroke="currentColor"
+        strokeWidth="0"
+        style={
+          Object {
+            "color": undefined,
+            "fontSize": "26px",
+          }
+        }
+        viewBox="0 0 24 24"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M19.023 16.977a35.13 35.13 0 0 1-1.367-1.384c-.372-.378-.596-.653-.596-.653l-2.8-1.337A6.962 6.962 0 0 0 16 9c0-3.859-3.14-7-7-7S2 5.141 2 9s3.14 7 7 7c1.763 0 3.37-.66 4.603-1.739l1.337 2.8s.275.224.653.596c.387.363.896.854 1.384 1.367l1.358 1.392.604.646 2.121-2.121-.646-.604c-.379-.372-.885-.866-1.391-1.36zM9 14c-2.757 0-5-2.243-5-5s2.243-5 5-5 5 2.243 5 5-2.243 5-5 5z"
+          key="0"
+        />
+      </svg>
+    </span>
+  </div>
+  <div
+    className="rs-flex-box-grid rs-flex-box-grid-top rs-flex-box-grid-center"
+  >
+    <div
+      className="rs-flex-box-grid-item rs-flex-box-grid-item-0 rs-col"
+      role="gridcell"
+    >
+      <h4>
+        Búsqueda
+      </h4>
+    </div>
+    <div
+      className="rs-flex-box-grid-item rs-flex-box-grid-item-0 rs-col rs-col-xs-20"
+      role="gridcell"
+    >
+      <form
+        className="rs-form rs-form-vertical rs-form-fixed-width"
+        onSubmit={[Function]}
+      >
+        <div
+          className="rs-form-group"
+          role="group"
+        >
+          <div
+            className="rs-input-group"
+            style={
+              Object {
+                "width": "100%",
+              }
+            }
+          >
+            <div
+              className="rs-form-control rs-form-control-wrapper"
+            >
+              <input
+                aria-describedby="id_search_input-help-text"
+                aria-labelledby="id_search_input-control-label"
+                className="rs-input"
+                id="id_search_input"
+                name="search"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                placeholder="Busca tu héroe favorito"
+                type="text"
+                value="batman"
+              />
+            </div>
+            <button
+              className="rs-input-group-addon rs-input-group-btn rs-btn rs-btn-default"
+              type="submit"
+            >
+              <svg
+                aria-hidden={true}
+                aria-label="search"
+                className="rs-icon"
+                data-category="action"
+                fill="currentColor"
+                focusable={false}
+                height="1em"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M6.5 1a5.5 5.5 0 110 11 5.5 5.5 0 110-11zm0 1a4.5 4.5 0 100 9 4.5 4.5 0 000-9z"
+                />
+                <path
+                  d="M9.646 9.646a.5.5 0 01.638-.058l.069.058 4.5 4.5a.5.5 0 01-.638.765l-.069-.058-4.5-4.5a.5.5 0 010-.707z"
+                />
+              </svg>
+              <span
+                className="rs-ripple-pond"
+              >
+                <span
+                  className="rs-ripple"
+                />
+              </span>
+            </button>
+          </div>
+          <span
+            className="rs-form-help-text"
+            id="id_search_input-help-text"
+          />
+        </div>
+      </form>
+    </div>
+  </div>
+  <h5>
+    Resultados (
+    1
+    )
+  </h5>
+  <div
+    className="mt-3 rs-flex-box-grid-item rs-flex-box-grid-item-0 rs-col"
+    role="gridcell"
+  >
+    <div
+      className="rsPanel animate__animated animate__fadeIn rs-panel"
+    >
+      <div
+        className="rs-panel-body rs-panel-body-fill"
+        role="region"
+      >
+        <img
+          alt="Batman"
+          className="imgCard"
+          src="/assets/dc-batman.jpg"
+        />
+        <div
+          className="rs-panel"
+        >
+          <div
+            className="rs-panel-body"
+            role="region"
+          >
+            <button
+              className="rs-btn rs-btn-subtle"
+              onClick={[Function]}
+              type="button"
+            >
+              Batman
+              <span
+                className="rs-ripple-pond"
+              >
+                <span
+                  className="rs-ripple"
+                />
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Pruebas en SearchScreen debe mostrar sin resultados por búsqueda sin data 1`] = `
+<div
+  className="container my-5"
+>
+  <div
+    aria-orientation="horizontal"
+    className="rs-divider rs-divider-horizontal rs-divider-with-text"
+    role="separator"
+  >
+    <span
+      className="rs-divider-inner-text"
+    >
+      <svg
+        aria-hidden={true}
+        className="rs-icon"
+        fill="currentColor"
+        focusable={false}
+        height="1em"
+        stroke="currentColor"
+        strokeWidth="0"
+        style={
+          Object {
+            "color": undefined,
+            "fontSize": "26px",
+          }
+        }
+        viewBox="0 0 24 24"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M19.023 16.977a35.13 35.13 0 0 1-1.367-1.384c-.372-.378-.596-.653-.596-.653l-2.8-1.337A6.962 6.962 0 0 0 16 9c0-3.859-3.14-7-7-7S2 5.141 2 9s3.14 7 7 7c1.763 0 3.37-.66 4.603-1.739l1.337 2.8s.275.224.653.596c.387.363.896.854 1.384 1.367l1.358 1.392.604.646 2.121-2.121-.646-.604c-.379-.372-.885-.866-1.391-1.36zM9 14c-2.757 0-5-2.243-5-5s2.243-5 5-5 5 2.243 5 5-2.243 5-5 5z"
+          key="0"
+        />
+      </svg>
+    </span>
+  </div>
+  <div
+    className="rs-flex-box-grid rs-flex-box-grid-top rs-flex-box-grid-center"
+  >
+    <div
+      className="rs-flex-box-grid-item rs-flex-box-grid-item-0 rs-col"
+      role="gridcell"
+    >
+      <h4>
+        Búsqueda
+      </h4>
+    </div>
+    <div
+      className="rs-flex-box-grid-item rs-flex-box-grid-item-0 rs-col rs-col-xs-20"
+      role="gridcell"
+    >
+      <form
+        className="rs-form rs-form-vertical rs-form-fixed-width"
+        onSubmit={[Function]}
+      >
+        <div
+          className="rs-form-group"
+          role="group"
+        >
+          <div
+            className="rs-input-group"
+            style={
+              Object {
+                "width": "100%",
+              }
+            }
+          >
+            <div
+              className="rs-form-control rs-form-control-wrapper"
+            >
+              <input
+                aria-describedby="id_search_input-help-text"
+                aria-labelledby="id_search_input-control-label"
+                className="rs-input"
+                id="id_search_input"
+                name="search"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                placeholder="Busca tu héroe favorito"
+                type="text"
+                value="batman123"
+              />
+            </div>
+            <button
+              className="rs-input-group-addon rs-input-group-btn rs-btn rs-btn-default"
+              type="submit"
+            >
+              <svg
+                aria-hidden={true}
+                aria-label="search"
+                className="rs-icon"
+                data-category="action"
+                fill="currentColor"
+                focusable={false}
+                height="1em"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M6.5 1a5.5 5.5 0 110 11 5.5 5.5 0 110-11zm0 1a4.5 4.5 0 100 9 4.5 4.5 0 000-9z"
+                />
+                <path
+                  d="M9.646 9.646a.5.5 0 01.638-.058l.069.058 4.5 4.5a.5.5 0 01-.638.765l-.069-.058-4.5-4.5a.5.5 0 010-.707z"
+                />
+              </svg>
+              <span
+                className="rs-ripple-pond"
+              >
+                <span
+                  className="rs-ripple"
+                />
+              </span>
+            </button>
+          </div>
+          <span
+            className="rs-form-help-text"
+            id="id_search_input-help-text"
+          />
+        </div>
+      </form>
+    </div>
+  </div>
+  <h5>
+    Sin Resultados
+  </h5>
+</div>
+`;

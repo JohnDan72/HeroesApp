@@ -1,7 +1,7 @@
 import { heroes } from '../data/heroes';
 
 export const getHeroesByText = (termino = '') => {
-    console.log("getHeroByText called");
+    // console.log("getHeroByText called");
     const regExp = new RegExp(`${termino}`, 'gi')
     return heroes.filter(hero =>
         regExp.test(hero.id) ||

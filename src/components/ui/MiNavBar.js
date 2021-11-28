@@ -20,12 +20,12 @@ const defaultProps = {};
 
 const MiNavBar = () => {
 
-    const { user , dispatch } = useContext(GeneralContext);
 
     const navigate = useNavigate();
-    const { setTheme, active, setActive } = useContext(GeneralContext);
+    const { setTheme, active, setActive , user , dispatch } = useContext(GeneralContext);
 
     const handleLogout = () => {
+        console.log("LogOut!!!!");
         dispatch({
             type: types.logout
         });
@@ -49,8 +49,8 @@ const MiNavBar = () => {
                         <Nav.Dropdown.Item as={CustomNavLink} icon={<MdLightMode />} eventKey='light' onClick={() => setTheme('light')}> Mode light</Nav.Dropdown.Item>
                         <Nav.Dropdown.Item as={CustomNavLink} icon={<MdDarkMode />} eventKey='dark' onClick={() => setTheme('dark')}> Mode dark</Nav.Dropdown.Item>
                     </Nav.Dropdown>
-                    <Nav.Dropdown title={user.name} icon={<BsFillPersonFill />}>
-                        <Nav.Dropdown.Item as={CustomNavLink} icon={<FiLogOut />} onClick={handleLogout}>Logout</Nav.Dropdown.Item>
+                    <Nav.Dropdown title={user.name} icon={<BsFillPersonFill />} id="id_account_nav">
+                        <Nav.Dropdown.Item as={CustomNavLink} icon={<FiLogOut />} onClick={handleLogout} id="id_logout">Logout</Nav.Dropdown.Item>
                     </Nav.Dropdown>
                 </Nav>
             </div>
