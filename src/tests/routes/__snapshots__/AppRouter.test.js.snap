@@ -904,6 +904,7 @@ exports[`Pruebas al AppRouter debe renderizar cualquier private page si esta aut
                   <a
                     className="rs-dropdown-item rs-dropdown-item-with-icon"
                     href="/"
+                    id="id_logout"
                     onClick={[Function]}
                     role="button"
                   >
@@ -1966,15 +1967,15 @@ exports[`Pruebas al AppRouter debe renderizar login si no esta authtenticado 1`]
           >
             <input
               checked={true}
-              id="indicator__i2rrrzhkzns_0"
-              name="indicator__i2rrrzhkzns_0"
+              id="indicator__q18zoptnk1s_0"
+              name="indicator__q18zoptnk1s_0"
               onChange={[Function]}
               type="radio"
               value={0}
             />
             <label
               className="rs-carousel-label"
-              htmlFor="indicator__i2rrrzhkzns_0"
+              htmlFor="indicator__q18zoptnk1s_0"
             />
           </li>
           <li
@@ -1983,15 +1984,15 @@ exports[`Pruebas al AppRouter debe renderizar login si no esta authtenticado 1`]
           >
             <input
               checked={false}
-              id="indicator__i2rrrzhkzns_1"
-              name="indicator__i2rrrzhkzns_1"
+              id="indicator__q18zoptnk1s_1"
+              name="indicator__q18zoptnk1s_1"
               onChange={[Function]}
               type="radio"
               value={1}
             />
             <label
               className="rs-carousel-label"
-              htmlFor="indicator__i2rrrzhkzns_1"
+              htmlFor="indicator__q18zoptnk1s_1"
             />
           </li>
           <li
@@ -2000,15 +2001,15 @@ exports[`Pruebas al AppRouter debe renderizar login si no esta authtenticado 1`]
           >
             <input
               checked={false}
-              id="indicator__i2rrrzhkzns_2"
-              name="indicator__i2rrrzhkzns_2"
+              id="indicator__q18zoptnk1s_2"
+              name="indicator__q18zoptnk1s_2"
               onChange={[Function]}
               type="radio"
               value={2}
             />
             <label
               className="rs-carousel-label"
-              htmlFor="indicator__i2rrrzhkzns_2"
+              htmlFor="indicator__q18zoptnk1s_2"
             />
           </li>
           <li
@@ -2017,15 +2018,15 @@ exports[`Pruebas al AppRouter debe renderizar login si no esta authtenticado 1`]
           >
             <input
               checked={false}
-              id="indicator__i2rrrzhkzns_3"
-              name="indicator__i2rrrzhkzns_3"
+              id="indicator__q18zoptnk1s_3"
+              name="indicator__q18zoptnk1s_3"
               onChange={[Function]}
               type="radio"
               value={3}
             />
             <label
               className="rs-carousel-label"
-              htmlFor="indicator__i2rrrzhkzns_3"
+              htmlFor="indicator__q18zoptnk1s_3"
             />
           </li>
         </ul>
@@ -2088,6 +2089,7 @@ exports[`Pruebas al AppRouter debe renderizar login si no esta authtenticado 1`]
                   aria-describedby={null}
                   aria-labelledby={null}
                   className="rs-input"
+                  id="id_email_input"
                   name="email"
                   onBlur={[Function]}
                   onChange={[Function]}
@@ -2119,6 +2121,7 @@ exports[`Pruebas al AppRouter debe renderizar login si no esta authtenticado 1`]
                   aria-labelledby={null}
                   autoComplete="off"
                   className="rs-input"
+                  id="id_password_input"
                   name="password"
                   onBlur={[Function]}
                   onChange={[Function]}

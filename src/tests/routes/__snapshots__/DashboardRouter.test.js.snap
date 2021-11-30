@@ -904,6 +904,7 @@ exports[`Pruebas en DashboardRouter debe mostrarse correctamente 1`] = `
                   <a
                     className="rs-dropdown-item rs-dropdown-item-with-icon"
                     href="/"
+                    id="id_logout"
                     onClick={[Function]}
                     role="button"
                   >

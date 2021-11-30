@@ -32,7 +32,7 @@ const HeroScreen = () => {
     logoPath += (publisher.startsWith('Marvel')) ? `marvelLogo.png`: `dcLogo.png`;
     
     const handleReturn = () => {
-        navigate(-1 , {replace:false});
+        navigate(-1);
     }
     return (
         <div className="container my-5">
