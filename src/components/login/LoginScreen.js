@@ -15,7 +15,7 @@ const LoginScreen = () => {
         <CustomProvider theme="dark">
             <FlexboxGrid className={styles.allHeighWidth} justify="center">
                 <FlexboxGrid.Item className="h-100" as={Col} xsHidden smHidden md={12} lg={14} >
-                    <Carousel className="h-100 custom-slider" autoplay >
+                    <Carousel className="h-100 custom-slider animate__animated animate__bounceInLeft" autoplay >
                         <div className={styles.carousel1} >
                             <div className="v-a-middle allHeightWidth" justify="center" >
                                 <h4> Heroes App </h4>

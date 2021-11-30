@@ -4,7 +4,8 @@ import { useParams, Navigate , useNavigate } from 'react-router-dom';
 import { Button, Col, Divider, FlexboxGrid, Panel } from 'rsuite';
 import { getHeroesById } from "../../selectors/getHeroesById";
 // import PropTypes from 'prop-types';
-
+// imgPath
+import { heroesImgs } from '../../helpers/heroesImgs';
 
 const propTypes = {};
 const defaultProps = {};
@@ -28,8 +29,7 @@ const HeroScreen = () => {
         alter_ego,
         first_appearance,
         characters } = heroInfo;
-    let logoPath = `/assets/`
-    logoPath += (publisher.startsWith('Marvel')) ? `marvelLogo.png`: `dcLogo.png`;
+    const logoPath = (publisher.startsWith('Marvel')) ? `marvelLogo.png`: `dcLogo.png`;
     
     const handleReturn = () => {
         navigate(-1);
@@ -44,10 +44,10 @@ const HeroScreen = () => {
 
             <Panel style={{ width: "100%" }} bodyFill>
                 <FlexboxGrid justify="center">
-                    <FlexboxGrid.Item as={Col}  className={styles.heroImgDiv}>
-                        <img className={`${styles.heroImg}`} src={`/assets/${id}.jpg`} alt={superhero} />
+                    <FlexboxGrid.Item as={Col}  className={`${styles.heroImgDiv} animate__animated animate__bounceInLeft`}>
+                        <img className={`${styles.heroImg}`} src={heroesImgs(`./${id}.jpg`).default} alt={superhero} />
                     </FlexboxGrid.Item>
-                    <FlexboxGrid.Item as={Col} xs={22} sm={20} md={10} className={`${styles.heroContent} `}>
+                    <FlexboxGrid.Item as={Col} xs={22} sm={20} md={10} className={`${styles.heroContent} animate__animated animate__bounceInRight`}>
                         <div className={`container my-4`} >
                             <FlexboxGrid align="middle" >
                                 <FlexboxGrid.Item as={Col} xs={16}>
@@ -56,7 +56,7 @@ const HeroScreen = () => {
                                     <Divider className={styles.bgDivider}></Divider>
                                 </FlexboxGrid.Item>
                                 <FlexboxGrid.Item as={Col} xs={8} className={styles.logoDiv}>
-                                    <img src={logoPath} className={styles.logoImg} alt={superhero}/>
+                                    <img src={heroesImgs(`./${logoPath}`).default } className={styles.logoImg} alt={superhero}/>
                                 </FlexboxGrid.Item>
                                 <FlexboxGrid.Item as={Col} xs={24}>
                                     <h4>Primera aparición </h4>

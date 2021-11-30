@@ -68,7 +68,7 @@ const FormLogin = () => {
     }
 
     return (
-        <div className="container mt-5">
+        <div className="container mt-5 animate__animated animate__bounceInRight">
             {/* <JSONView formValue={formValue} /> */}
             <FlexboxGrid justify="center">
                 {/* logo */}

@@ -4,6 +4,10 @@ import PropTypes from 'prop-types';
 import { Button, Panel } from 'rsuite';
 import { useNavigate } from 'react-router-dom';
 
+// imgPath 
+import { heroesImgs } from '../../helpers/heroesImgs';
+
+
 const propTypes = {
     id: PropTypes.string,
     superhero: PropTypes.string,
@@ -27,10 +31,9 @@ const HeroCard = ({
         return navigate(`/hero/${id}`)
     }
 
-    const imagPath = `/assets/${id}.jpg`;
     return (
         <Panel bodyFill className={`${styles.rsPanel} animate__animated animate__fadeIn`}>
-            <img src={imagPath} className={styles.imgCard} alt={superhero} />
+            <img src={heroesImgs(`./${id}.jpg`).default} className={styles.imgCard} alt={superhero} />
             <Panel>
                 <Button appearance="subtle" onClick={handleClick}>{superhero}</Button>
             </Panel>
