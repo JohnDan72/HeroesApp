@@ -30,8 +30,8 @@ const FormLogin = () => {
     const navigate = useNavigate();
 
     const { formValue, handleInputChange, setFormError, setLoading, resetForm } = useForm({
-        email: 'juan1@gmail.com',
-        password: 'xdlol1234'
+        email: 'ejemplo1@gmail.com',
+        password: '123456'
     });
     const { status: status_error, error_msg } = formValue.error;
     const { loading, email, password } = formValue;
